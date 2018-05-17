@@ -182,9 +182,12 @@
 
 @function form-input-required() {
   @return this(
-    this-hover(
+    rule(
+      '&[required]',
       padding-right(2em),
-      background-image(icon-required())
+      background-image(icon-required()),
+      background-repeat('no-repeat'),
+      background-position('right center')
     )
   );
 }
