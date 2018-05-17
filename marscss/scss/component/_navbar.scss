@@ -36,7 +36,13 @@ $navbar-color: $white;
   $padding: $gutter/2
 ) {
   @return style(
-    navbar__root(color($color), background-color($background), position(relative)),
+    navbar__root(
+      display(flex),
+      justify-content(space-between),
+      color($color),
+      background-color($background),
+      position(relative)
+    ),
     navbar__logo(padding($padding)),
     navbar__container(padding($padding)),
     navbar__menu(

@@ -10,8 +10,6 @@
         @media #{$contentKey} {
           @include map-print(map-get($properties, $key));
         }
-      } @else if str-index($key, 'function') {
-        @include map-print(map-get($properties, $key));
       }
     }
     @else {
