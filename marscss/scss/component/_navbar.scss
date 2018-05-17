@@ -46,7 +46,7 @@ $navbar-color: $white;
         display(block),
         padding($padding/4 $padding/2) transition(background-color .3s ease-out),
         background-color(transparent),
-        navbar__menu-hover(background-color(rgba($white, .3)))
+        navbar__menu-hover(background-color(rgba($white, .3))),
         navbar__menu-active(background-color(rgba($white, .15)))
       )
     )
