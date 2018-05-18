@@ -1,6 +1,26 @@
 $mod-border-radius: 5px !default;
 $mod-spacing: $gutter / 2 !default;
 
+@function background-attachment($arg) {
+  @return (background-attachment: $arg);
+}
+
+@function background-color($arg) {
+  @return (background-color: $arg);
+}
+
+@function background-image($arg) {
+  @return (background-image: $arg);
+}
+
+@function background-position($arg) {
+  @return (background-position: $arg);
+}
+
+@function background-repeat($arg) {
+  @return (background-repeat: $arg);
+}
+
 @function border($arg) {
   @return (border: $arg);
 }
@@ -134,25 +154,8 @@ $mod-spacing: $gutter / 2 !default;
   @return (border-width: $arg);
 }
 
-
-@function background-attachment($arg) {
-  @return (background-attachment: $arg);
-}
-
-@function background-color($arg) {
-  @return (background-color: $arg);
-}
-
-@function background-image($arg) {
-  @return (background-image: $arg);
-}
-
-@function background-position($arg) {
-  @return (background-position: $arg);
-}
-
-@function background-repeat($arg) {
-  @return (background-repeat: $arg);
+@function bottom($arg) {
+  @return (bottom: $arg);
 }
 
 @function box-decoration-break($arg) {
@@ -673,6 +676,10 @@ $mod-spacing: $gutter / 2 !default;
 
 @function transition-timing-function($arg) {
   @return ( transition-timing-function: $arg);
+}
+
+@function top($arg) {
+  @return ( top: $arg);
 }
 
 @function unicode-bidi($arg) {

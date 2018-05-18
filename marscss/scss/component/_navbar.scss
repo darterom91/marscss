@@ -1,4 +1,5 @@
 $navbar--fixed-zindex: 10 !default;
+$navbar--fixed-height: 5rem !default;
 $navbar-background: $black;
 $navbar-color: $white;
 
@@ -60,5 +61,14 @@ $navbar-color: $white;
 }
 
 @function navbar--fixed($zindex: $navbar--fixed-zindex) {
-  @return style(navbar__root(position(fixed), top(0), z-index($zindex), width(100%)));
+  @debug 'navbar--fixed';
+  @return style(
+    navbar__root(
+      position(fixed),
+      height($navbar--fixed-height),
+      top(0),
+      z-index($zindex),
+      width(100%)
+    )
+  );
 }
