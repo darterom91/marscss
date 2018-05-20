@@ -2,9 +2,10 @@
 title: helpers
 layout: documentation
 active: helpers
+anchors_menu: '> h2'
 ---
 
-# helpers
+## helpers
 
 since
 : 1.0.0
@@ -17,6 +18,15 @@ Add all the marscss helpers and pass their arguments
 ~~~scss
 @include style(helpers());
 ~~~
+
+
+## customize helpers
+
+You have a group of variables within default-variables to adjust the prefixes and colors of the helpers globally.
+
+<%= code_snippet('helpers',
+                 "#{config.marscss_path}/core/_default-variables.scss") %>
+
 
 ## helpers-align
 
@@ -98,7 +108,7 @@ since
 <% end %>
 
 
-##bg
+## helpers-bg
 
 since
 : 1.0.0
@@ -637,7 +647,7 @@ since
 <% end %>
 
 
-### helper-utilities
+## helper-utilities
 
 since
 : 1.0.0
@@ -647,7 +657,7 @@ arguments
 
 Adds a set of helpers included in utilities
 
-## last-margin-0
+#### last-margin-0
 
 since
 : 1.0.0
@@ -661,7 +671,7 @@ since
 <% end %>
 
 
-## sr-only
+### sr-only
 
 since
 : 1.0.0
@@ -669,11 +679,3 @@ since
 <% example_html do %>
 <div class="sr-only">sr-only</div>
 <% end %>
-
-
-## customize helpers
-
-You have a group of variables within default-variables to adjust the prefixes and colors of the helpers globally.
-
-<%= code_snippet('helpers',
-                 "#{config.marscss_path}/core/_default-variables.scss") %>
