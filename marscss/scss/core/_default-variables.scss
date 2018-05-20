@@ -100,6 +100,7 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 
+//-- form
 $form-element-bg: $white !default;
 $form-element-border-radius: 3px !default;
 $form-element-border: 1px solid $border-color !default;
@@ -108,3 +109,25 @@ $form-element-icon-color: $primary !default;
 $form-element-line-height: 1.8em !default;
 $form-element-padding: .4em 1em !default;
 $form-element-placeholder: rgba($font-color, .4) !default;
+
+//--- helpers
+$prefix-helper: '.' !default;
+$prefix-helper-align: 'align' !default;
+$prefix-helper-bg: 'bg' !default;
+$prefix-helper-border: 'border' !default;
+$prefix-helper-color: 'color' !default;
+$prefix-helper-columns: 'columns' !default;
+$prefix-helper-display: 'display' !default;
+$prefix-helper-fs: 'fs' !default;
+$prefix-helper-pull: 'pull' !default;
+$prefix-helper-ratio: 'ratio' !default;
+$prefix-helper-text: 'text' !default;
+$prefix-helper-utilities: '' !default;
+
+$helper-colors: $colors !default;
+$helper-colors-inherit: inherit !default;
+$helper-bg-colors: $colors !default;
+$helper-bg-colors-transparent: transparent !default;
+$helper-border-colors: $colors !default;
+$helper-columns-sizes: $grid-breakpoints !default;
+//---

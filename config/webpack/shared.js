@@ -20,6 +20,7 @@ module.exports = {
     exampleReset: examplePath + 'example-reset.scss',
     exampleElements: examplePath + 'example-elements.scss',
     exampleCard: examplePath + 'example-card.scss',
+    exampleWorkingWithMaps: examplePath + 'example-working-with-maps.scss',
     exampleComponents: examplePath + 'example-components.scss',
     images: sync('./source/images/**/*', { nodir: true }),
     vendor: ['lodash', 'jquery']
@@ -82,9 +83,7 @@ module.exports = {
             options: {
               publicPath: '',
               // can't use 'fonts' because it conflicts with Middleman
-              name: isProduction
-                ? 'fnt/[name]-[hash].[ext]'
-                : 'fnt/[name].[ext]'
+              name: isProduction ? 'fnt/[name]-[hash].[ext]' : 'fnt/[name].[ext]'
             }
           }
         ]
@@ -99,9 +98,7 @@ module.exports = {
               outputPath: 'img/',
               context: 'source/images/',
               // can't use 'images' because it conflicts with Middleman
-              name: isProduction
-                ? '[path][name]-[hash].[ext]'
-                : '[path][name].[ext]'
+              name: isProduction ? '[path][name]-[hash].[ext]' : '[path][name].[ext]'
             }
           }
         ]
@@ -122,17 +119,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [
-      '.js',
-      '.ts',
-      '.sass',
-      '.scss',
-      '.css',
-      '.png',
-      '.svg',
-      '.gif',
-      '.jpeg'
-    ],
+    extensions: ['.js', '.ts', '.sass', '.scss', '.css', '.png', '.svg', '.gif', '.jpeg'],
     modules: [resolve('source/javascripts'), 'node_modules'],
     alias: {
       assets: resolve('source/'),

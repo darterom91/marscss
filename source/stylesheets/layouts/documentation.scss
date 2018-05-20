@@ -45,7 +45,7 @@ body.documentation {
     }
 
     @for $i from 2 through 6 {
-      .anchor-h#{$i}{
+      .anchor-h#{$i} {
         padding-left: ($i - 2) * .5em;
       }
     }
@@ -84,14 +84,16 @@ body.documentation {
     padding: $gutter*2 $gutter;
 
     > {
+      $fix-menu: 6rem;
+
       h1, h2, h3, h4 {
         &:not(:first-child) {
           margin-top: 3em;
         }
         &::before {
           display: block;
-          height: 3rem;
-          margin-top: -3rem;
+          height: $fix-menu;
+          margin-top: -$fix-menu;
           visibility: hidden;
           content: '';
         }

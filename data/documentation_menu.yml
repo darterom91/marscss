@@ -1,22 +1,10 @@
 - name: Getting started
   url: ''
-- name: '@include marscss'
-- name: '@include extend'
-- name: '@include style'
-- name: 'map reset()'
-- name: 'map elements()'
-- name: 'map helpers()'
-- name: Core
-  url: 'core'
-  subpages:
-  - name: Functions
-    url: functions
-  - name: Properties
-    url: properties
-  - name: Names
-    url: names
-  - name: Tags
-    url: tags
+- name: 'working with maps'
+- name: 'elements'
+- name: 'forms'
+- name: 'helpers'
+- name: 'grid'
 - name: Component
   url: 'component'
   subpages:
