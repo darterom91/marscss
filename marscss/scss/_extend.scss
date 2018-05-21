@@ -3,6 +3,7 @@
   %reset-text-block { @include style(reset-text-block()); }
   %reset-list { @include style(reset-list()); }
   %reset-checks { @include style(reset-checks()); }
+  %reset-link { @include style(reset-link()); }
 
   %grid-column { @include make-col-ready; }
   %container { @include make-container; }

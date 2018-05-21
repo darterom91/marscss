@@ -1,27 +1,27 @@
 @function reset() {
   @return (
-    '*': reset-all(),
+    '*': reset-box-sizing(),
     'html': reset-html(),
     'body': reset-body(),
-    'a': reset-a(),
     'button': reset-button(),
-    'h1': ('@extend': '%reset-heading'),
-    'h2': ('@extend': '%reset-heading'),
-    'h3': ('@extend': '%reset-heading'),
-    'h4': ('@extend': '%reset-heading'),
-    'h5': ('@extend': '%reset-heading'),
-    'h6': ('@extend': '%reset-heading'),
-    'p': ('@extend': '%reset-text-block'),
-    'blockquote': ('@extend': '%reset-text-block'),
-    'ul': ('@extend': '%reset-list'),
-    'ol': ('@extend': '%reset-list'),
-    'dl': ('@extend': '%reset-list'),
-    'input[type="checkbox"]': ('@extend': '%reset-checks'),
-    'input[type="radio"]': ('@extend': '%reset-checks')
+    'a': extend('%reset-link'),
+    'h1': extend('%reset-heading'),
+    'h2': extend('%reset-heading'),
+    'h3': extend('%reset-heading'),
+    'h4': extend('%reset-heading'),
+    'h5': extend('%reset-heading'),
+    'h6': extend('%reset-heading'),
+    'p': extend('%reset-text-block'),
+    'blockquote': extend('%reset-text-block'),
+    'ul': extend('%reset-list'),
+    'ol': extend('%reset-list'),
+    'dl': extend('%reset-list'),
+    'input[type="checkbox"]': extend('%reset-checks'),
+    'input[type="radio"]': extend('%reset-checks')
   );
 }
 
-@function reset-all() {
+@function reset-box-sizing() {
   @return (
     (
       '&,&::before,&::after': (
@@ -57,7 +57,7 @@
   );
 }
 
-@function reset-a() {
+@function reset-link() {
   @return(
     '&': (
       color: inherit,

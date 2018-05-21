@@ -1,19 +1,10 @@
 - name: Getting started
   url: ''
+- name: '@include marscss'
+- name: '@include extend'
+- name: '@include grid'
+- name: 'elements()'
+- name: 'forms()'
+- name: 'helpers()'
 - name: 'working with maps'
-- name: 'elements'
-- name: 'forms'
-- name: 'helpers'
-- name: 'grid'
-- name: Component
-  url: 'component'
-  subpages:
-  - name: Alert
-    url: component/alert
-  - name: Badge
-    url: badge
-  - name: Card
-    url: component/card
-  - name: Hamburger
-    url: hamburger
 

@@ -1,6 +1,14 @@
 $mod-border-radius: 5px !default;
 $mod-spacing: $gutter / 2 !default;
 
+@function appearance($arg) {
+  @return (appearance: $arg);
+}
+
+@function background($arg) {
+  @return (background: $arg);
+}
+
 @function background-attachment($arg) {
   @return (background-attachment: $arg);
 }
