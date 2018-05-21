@@ -1,31 +1,36 @@
 ---
 title: forms
 layout: documentation
-active: forms
+active: forms()
+anchors_menu: '> h2'
 ---
 
-#forms
+## forms
 
-group the mixins for form elements, these can be used directly from your own selectors or through the mars-build-form, for these examples the selectors created by mars-build-forms are being used
+since
+: 1.0.0
 
-##variables
+arguments
+: `$prefix`: `$prefix-form` *[string]*: this is added to the beginning of selectors.
+
+
+Add all the marscss forms class.
+
+~~~scss
+@include style(forms());
+~~~
+
+
+## customize forms
 
 There is a set of variables in default-variable that allow you to modify some properties of these mixins and not have to rewrite them for small adjustments
 
-~~~scss
-$form-element-bg: $white;
-$form-element-border-radius: 3px;
-$form-element-border: 1px solid $border-color;
-$form-element-disabled: .3;
-$form-element-icon-color: $primary;
-$form-element-line-height: 1.8em;
-$form-element-padding: .4em 1em;
-$form-element-placeholder: rgba($font-color, .4);
-~~~
+<%= code_snippet('forms',
+                 "#{config.marscss_path}/core/_default-variables.scss") %>
 
 ##form-element
 
-This mixin generates the styles of the common parts of most form elements, it is used by the @extend %form-element.
+This mixin generates the styles of the common parts of most form elements, it is used by the `@extend %form-element`.
 
 since
 : 1.0.0
@@ -37,117 +42,21 @@ used by:
 : [input](#input)
 : [textarea](#textarea)
 : [select](#select)
-: [input-search](#input-search)
-
-<% example_tabs do %>
-
-~~~scss
-@mixin form-element {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: $form-element-padding;
-  font-size: inherit;
-  line-height: $form-element-line-height;
-  background: $white none no-repeat calc(100% - .7em) center;
-  background-size: 1em;
-  border: $form-element-border;
-  border-radius: $form-element-border-radius;
-  transition: background .2s ease-out, border .2s ease-out;
-  appearance: none;
-
-  &:focus {
-    @extend %focus;
-  }
-
-  &::placeholder {
-    color: $form-element-placeholder;
-    opacity: 1; // Firefox's bug https://github.com/twbs/bootstrap/pull/11526
-  }
-
-  &:disabled,
-  &.is-disabled {
-    pointer-events: none;
-    opacity: $form-element-disabled;
-  }
-}
-~~~
-
-~~~css
-.textarea, .input, .select {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.4em 1em;
-  font-size: inherit;
-  line-height: 1.8em;
-  background: #fff none no-repeat calc(100% - .7em) center;
-  background-size: 1em;
-  border: 1px solid #dee2e6;
-  border-radius: 3px;
-  transition: background .2s ease-out, border .2s ease-out;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
-  .textarea::-webkit-input-placeholder, .input::-webkit-input-placeholder, .select::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    opacity: 1; }
-  .textarea:-ms-input-placeholder, .input:-ms-input-placeholder, .select:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    opacity: 1; }
-  .textarea::placeholder, .input::placeholder, .select::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-    opacity: 1; }
-  .textarea:disabled, .input:disabled, .select:disabled, .is-disabled.textarea, .is-disabled.input, .is-disabled.select {
-    pointer-events: none;
-    opacity: 0.3; }
-~~~
-<% end %>
 
 
 ##form-checks
 
-This mixin generates the styles of the common parts of most form elements, it is used by the @extend %form-checks.
+This mixin generates the styles of the common parts of most form elements, it is used by the `@extend %form-checks`.
 
 since
 : 1.0.0
 
 extend
-: <%= link_to '%form-checks', '/documentation/extends' %>
+: <%= link_to '%form-checks', '/documentation/include-extend' %>
 
 used by:
 : [checkbox](#checkbox)
 : [radio](#radio)
-
-<% example_tabs do %>
-~~~scss
-@mixin form-checks {
-  display: inline-block;
-  margin-bottom: .5em;
-  cursor: pointer;
-
-  & + & {
-    margin-left: .5em;
-  }
-
-  &[disabled],
-  &.is-disabled {
-    cursor: not-allowed;
-    opacity: $form-element-disabled;
-  }
-}
-~~~
-
-~~~css
-.checkbox, .radio {
-  display: inline-block;
-  margin-bottom: .5em;
-  cursor: pointer; }
-  [disabled].checkbox, [disabled].radio, .is-disabled.checkbox, .is-disabled.radio {
-    cursor: not-allowed;
-    opacity: 0.3; }
-~~~
-<% end %>
 
 
 ##input
@@ -157,13 +66,9 @@ Is used by `<input type="text">` tag , extends [form-element](#form-element) sty
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%input', '/documentation/extends' %>
+: <%= link_to '%input', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -184,19 +89,6 @@ extend
 </div>
 <% end %>
 
-~~~scss
-@mixin input {
-  @extend %form-element;
-
-  &:required,
-  &.is-required {
-    padding-right: 2em;
-    background-image: url('data:image/svg+xml;utf8,<svg width="16px" height="16px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon-required" fill="'+$form-element-icon-color +'"><polygon id="*-copy" points="6.09933775 7.54054054 3 6.45945946 3.63576159 5 6.44370861 6.45945946 6.17880795 3 7.82119205 3 7.55629139 6.45945946 10.3642384 5 11 6.45945946 7.92715232 7.54054054 10.3112583 9.94594595 9.14569536 11 7.02649007 8.18918919 4.90728477 11 3.71523179 9.94594595"></polygon></g></g></svg>');
-  }
-}
-~~~
-<% end %>
-
 
 ##textarea
 
@@ -205,13 +97,9 @@ Is used by `<textarea>` tag, extends [input](#input) styles with small modificat
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%textarea', '/documentation/extends' %>
+: <%= link_to '%textarea', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -227,19 +115,6 @@ extend
 </div>
 <% end %>
 
-~~~scss
-@mixin textarea {
-  @extend %input;
-  background-position-y: $form-element-line-height / 2;
-
-  &.no-resize {
-    resize: none;
-  }
-}
-~~~
-
-<% end %>
-
 
 ##select
 
@@ -248,13 +123,9 @@ Is used by `<select>` tag, extends [form-element](#form-element) styles with sma
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%select', '/documentation/extends' %>
+: <%= link_to '%select', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -279,24 +150,6 @@ extend
 </div>
 <% end %>
 
-~~~scss
-@mixin select {
-  @extend %form-element;
-  padding-right: 2em;
-  background-image: url('data:image/svg+xml;utf8,<svg width="16px" height="16px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="icon-caret-down" fill="'+$form-element-icon-color +'"><path d="M11.0000095,5.49999225 C11.0000095,5.22655443 10.7734468,4.99999166 10.5000089,4.99999166 L3.5000006,4.99999166 C3.22656277,4.99999166 3,5.22655443 3,5.49999225 C3,5.63280491 3.05468757,5.75780506 3.14843768,5.85155517 L6.64844185,9.35155934 C6.74219196,9.44530945 6.86719211,9.49999702 7.00000477,9.49999702 C7.13281743,9.49999702 7.25781758,9.44530945 7.35156769,9.35155934 L9.10973664,7.59339039 L10.8515719,5.85155517 C10.945322,5.75780506 11.0000095,5.63280491 11.0000095,5.49999225 Z" id="caret-down---FontAwesome"></path></g></g></svg>');
-
-  &:invalid {
-    color: $form-element-placeholder;
-  }
-
-  &::-ms-expand {
-    display: none;
-  }
-}
-~~~
-
-<% end %>
-
 
 ##label
 
@@ -305,13 +158,9 @@ Is used by `<label>` tag
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%label', '/documentation/extends' %>
+: <%= link_to '%label', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -329,30 +178,6 @@ extend
 </div>
 <% end %>
 
-~~~scss
-@mixin label {
-  display: inline-block;
-  margin-bottom: .5em;
-
-  &[for]{
-    cursor: pointer;
-
-    &:hover {
-      color: $link-color;
-    }
-  }
-
-  @include form-element-required {
-    &::after {
-      margin-left: .5em;
-      color: $form-element-icon-color;
-      content: '*';
-    }
-  }
-}
-~~~
-<% end %>
-
 
 ##checkbox
 
@@ -361,13 +186,9 @@ Is used by `<input type="checkbox">` tag , extends [form-checks](#form-checks) s
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%checkbox', '/documentation/extends' %>
+: <%= link_to '%checkbox', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -407,32 +228,17 @@ extend
 </div>
 <% end %>
 
-~~~scss
-@mixin checkbox {
-  @extend %form-checks;
 
-  & + & {
-    margin-left: .5em;
-  }
-}
-~~~
-<% end %>
-
-
-##radio
+## radio
 
 Is used by `<input type="radio">` tag , extends [form-checks](#form-checks) styles with small modifications
 
 since
 : 1.0.0
 
-builders
-: <%= link_to 'mars-build-forms', '/documentation/builders/mars-build-forms' %>
-
 extend
-: <%= link_to '%radio', '/documentation/extends' %>
+: <%= link_to '%radio', '/documentation/include-extend' %>
 
-<% example_tabs do %>
 <% example_html do %>
 <div class="container-20em">
   <p>
@@ -471,15 +277,3 @@ extend
   </p>
 </div>
 <% end %>
-
-~~~scss
-@mixin radio {
-  @extend %form-checks;
-
-  & + & {
-    margin-left: .5em;
-  }
-}
-~~~
-<% end %>
-

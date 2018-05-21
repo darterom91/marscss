@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // group all the form selectors using the extend
 
-@function forms($prefix: '.') {
+@function forms($prefix: $prefix-forms) {
   @return style(
     rule('#{$prefix}checkbox', extend('%checkbox')),
     rule('#{$prefix}input', extend('%input')),
@@ -185,9 +185,7 @@
     rule(
       '&[required]',
       padding-right(2em),
-      background-image(icon-required()),
-      background-repeat('no-repeat'),
-      background-position('right center')
+      background-image(icon-required())
     )
   );
 }
@@ -270,11 +268,9 @@
 }
 
 @function form-select-reset() {
-  @return this(
-    rule(
-      '&::-ms-expand',
-      display(none)
-    )
+  @return rule(
+    '&::-ms-expand',
+    display(none)
   );
 }
 //---

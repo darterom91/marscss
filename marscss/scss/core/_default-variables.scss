@@ -81,6 +81,7 @@ $font-size-h4:          $base * pow($multiplier, 2) + $unit !default;
 $font-size-h5:          $font-size-large !default;
 $font-size-h6:          $font-size !default;
 
+//--- grid
 $grid-columns:         12 !default;
 $gutter:               3rem !default;
 $grid-gutter-width:    $gutter !default;
@@ -100,7 +101,9 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 
-//-- form
+//--- forms
+$prefix-forms: '.' !default;
+
 $form-element-bg: $white !default;
 $form-element-border-radius: 3px !default;
 $form-element-border: 1px solid $border-color !default;
