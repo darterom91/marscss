@@ -26,5 +26,5 @@
 dist
 *.orig
 
-# Ignore idea
+# Idea
 .idea/
