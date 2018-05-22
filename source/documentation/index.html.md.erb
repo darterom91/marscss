@@ -3,6 +3,7 @@ title: Getting started
 layout: documentation
 active: Getting started
 example: example-getting-started
+anchors_menu: '> h2'
 ---
 
 
@@ -54,51 +55,6 @@ If you want to access the extends and the default reset of the html marckup you 
 ~~~
 
 The way marscss works allows us to rewrite any part of its core since until we do the @include marscss we do not release any of its functions and mixins
-
-###Your first application.scss
-
-The organization within your main file can follow the following order
-
-1. **marscss core**
-This is preferable to load first
-
-2. **custom variables**
-copy the [default-variables.scss](https://github.com/MarsBased/marscss/blob/master/marscss/scss/_default-variables.scss) file in your project, replace name by variables.scss and import, it is preferable to duplicate it whole since there are values of variables that depend on others.
-
-3. **custom core**
-This is one of the differential points of this framework, the core is designed to be extended and modified, so for that we reserve this space.
-I suggest creating a folder `/core` and that those mixins and extends modify the things you need from marscss
-
-4. **marscss init and builders**
-This is the function that starts the extensions and by default the reset unless it is passed as an argument false
-At this point we can add the different builders that we need for our project.
-
-5. **Custom CSS**
-In this part we include the scss of our project, from here we can access the core with its modifications so it is important that it always loads last.
-It also allows us to use the extends that marscss generates in our code
-
-### Example application.scss
-~~~scss
-// MARSCSS CORE
-@import 'node_modules/marscss/marscss';
-
-// CUSTOM VARIABLES
-@import 'utilities/variables';
-
-// CUSTOM CORE
-@import 'core.scss';
-
-// MARSCSS BUILDERS
-@include marscss;
-@include style(helpers());
-// etc...
-
-// CUSTOM SCSS
-@import 'layout/index';
-@import 'blocks/header';
-@import 'blocks/footer';
-// etc...
-~~~
 
 ## Resets
 
