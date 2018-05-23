@@ -13,20 +13,25 @@ anchors_menu: 'h2,h3'
 The organization within your main file can follow the following order
 
 1. **marscss core**
+<br>
 This is preferable to load first
 
 2. **custom variables**
+<br>
 copy the [default-variables.scss](https://github.com/MarsBased/marscss/blob/master/marscss/scss/_default-variables.scss) file in your project, replace name by variables.scss and import, it is preferable to duplicate it whole since there are values of variables that depend on others.
 
 3. **custom core**
+<br>
 This is one of the differential points of this framework, the core is designed to be extended and modified, so for that we reserve this space.
 I suggest creating a folder `/core` and that those mixins and extends modify the things you need from marscss
 
 4. **@include marscss**
+<br>
 This is the function that starts the extensions and by default the reset unless it is passed as an argument false
 At this point we can add the different builders that we need for our project.
 
 5. **Custom CSS**
+<br>
 In this part we include the scss of our project, from here we can access the core with its modifications so it is important that it always loads last.
 It also allows us to use the extends that marscss generates in our code
 
@@ -64,16 +69,16 @@ It is a good practice to add as the name of the main file the one of the depende
 
 This file will be the main file of our configuration and will be added to the beginning of all the other components.
 
-1. **marscss**
+1. **marscss**<br>
 First of all add to this file marscss from our folder node_modules
 
-2. **custom variables**
+2. **custom variables**<br>
 To overwrite the variables we can duplicate the entire file and add only the variables that we are going to modify.
 
-3. **custom core**
+3. **custom core**<br>
 Here we can overwrite any marscss function, if we are going to make many modifications on the core it is preferable, as we have said before, to generate a new folder and separate it in a more structured way.
 
-4. **include extend**
+4. **include extend**<br>
 Last but not least we will add @include extend that will allow us to use the different extensions from any component.
 
 #### Example src/marscss.scss
