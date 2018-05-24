@@ -26,38 +26,43 @@
     rule('#{$prefix-helper}#{$prefix}-text-top', helper-align-text-top())
   );
 }
-//---
 
+//--- helper-align-baseline
 @function helper-align-baseline() {
   @return this(
     vertical-align(baseline !important)
   );
 }
 
+//--- helper-align-top
 @function helper-align-top() {
   @return this(
     vertical-align(top !important)
   );
 }
 
+//--- helper-aling-middle
 @function helper-align-middle() {
   @return this(
     vertical-align(middle !important)
   );
 }
 
+//--- helper-align-bottom
 @function helper-align-bottom() {
   @return this(
     vertical-align(bottom !important)
   );
 }
 
+//--- helper-align-text-bottom
 @function helper-align-text-bottom() {
   @return this(
     vertical-align(text-bottom !important)
   );
 }
 
+//--- helper-align-text-top
 @function helper-align-text-top() {
   @return this(
     vertical-align(text-top !important)
@@ -108,42 +113,49 @@
   );
 }
 
+//--- helper-border
 @function helper-border() {
   @return this(
     border(1px solid !important)
   );
 }
 
+//--- helper-border-0
 @function helper-border-0() {
   @return this(
     border(0 !important)
   );
 }
 
+//--- helper-border-top
 @function helper-border-top() {
   @return this(
     border-top(1px solid !important)
   );
 }
 
+//--- helper-border-right
 @function helper-border-right() {
   @return this(
     border-right(1px solid !important)
   );
 }
 
+//--- helper-border-bottom
 @function helper-border-bottom() {
   @return this(
     border-bottom(1px solid !important)
   );
 }
 
+//--- helper-border-left
 @function helper-border-left() {
   @return this(
     border-left(1px solid !important)
   );
 }
 
+//--- helper-border-colors
 @function helper-border-colors(
   $prefix: $prefix-helper-border,
   $colors: $helper-border-colors
@@ -243,48 +255,56 @@
   );
 }
 
+//--- helper-display-block
 @function helper-display-block() {
   @return this(
     display(block !important)
   );
 }
 
+//--- helper-display-flex
 @function helper-display-flex() {
   @return this(
     display(flex !important)
   );
 }
 
+//--- helper-display-inline
 @function helper-display-inline() {
   @return this(
     display(inline !important)
   );
 }
 
+//--- helper-display-inline-block
 @function helper-display-inline-block() {
   @return this(
     display(inline-block !important)
   );
 }
 
+//--- helper-display-inline-flex
 @function helper-display-inline-flex() {
   @return this(
     display(inline-flex !important)
   );
 }
 
+//helper-display-none
 @function helper-display-none() {
   @return this(
     display(none !important)
   );
 }
 
+//--- helper-display-table
 @function helper-display-table() {
   @return this(
     display(table !important)
   );
 }
 
+//--- helper-display-table-cell
 @function helper-display-table-cell() {
   @return this(
     display(table-cell !important)
@@ -306,54 +326,63 @@
   );
 }
 
+//--- helper-fs-hero
 @function helper-fs-hero() {
   @return this(
     font-size($font-size-hero !important)
   );
 }
 
+//--- helper-fs-h1
 @function helper-fs-h1() {
   @return this(
     font-size($font-size-h1 !important)
   );
 }
 
+//--- helper-fs-h2
 @function helper-fs-h2() {
   @return this(
     font-size($font-size-h2 !important)
   );
 }
 
+//--- helper-fs-h3
 @function helper-fs-h3() {
   @return this(
     font-size($font-size-h3 !important)
   );
 }
 
+//--- helper-fs-h4
 @function helper-fs-h4() {
   @return this(
     font-size($font-size-h4 !important)
   );
 }
 
+//--- helper-fs-h5
 @function helper-fs-h5() {
   @return this(
     font-size($font-size-h5 !important)
   );
 }
 
+//--- helper-fs-h6
 @function helper-fs-h6() {
   @return this(
     font-size($font-size-h6 !important)
   );
 }
 
+//--- helper-fs-large
 @function helper-fs-large() {
   @return this(
     font-size($font-size-large !important)
   );
 }
 
+//--- helper-fs-small
 @function helper-fs-small() {
   @return this(
     font-size($font-size-small !important)
@@ -369,18 +398,21 @@
   );
 }
 
+//--- helper-pull-clear
 @function helper-pull-clear() {
   @return this(
     clear(both !important)
   );
 }
 
+//--- helper-pull-right
 @function helper-pull-right() {
   @return this(
     float(right !important)
   );
 }
 
+//--- helper-pull-left
 @function helper-pull-left() {
   @return this(
     float(left !important)
@@ -413,6 +445,7 @@
   }
 }
 
+//--- helper-ratio-16-9
 @function helper-ratio-16-9() {
   @return this(
     extend('%ratio'),
@@ -420,6 +453,7 @@
   );
 }
 
+//--- helper-ratio-4-3
 @function helper-ratio-4-3() {
   @return this(
     extend('%ratio'),
@@ -427,6 +461,7 @@
   );
 }
 
+//--- helper-ratio-1-1
 @function helper-ratio-1-1() {
   @return this(
     extend('%ratio'),
@@ -434,7 +469,7 @@
   );
 }
 
-//--- text
+//--- helpers-text
 @function helpers-text($prefix: $prefix-helper-text) {
   @return style(
     rule('#{$prefix-helper}#{$prefix}-center', helper-text-center()),
@@ -449,30 +484,35 @@
   );
 }
 
+//--- helper-text-center
 @function helper-text-center() {
   @return this(
     text-align(center !important)
   );
 }
 
+//--- helper-text-left
 @function helper-text-left() {
   @return this(
     text-align(left !important)
   );
 }
 
+//--- helper-text-right
 @function helper-text-right() {
   @return this(
     text-align(right !important)
   );
 }
 
+//--- helper-text-capitalize
 @function helper-text-capitalize() {
   @return this(
     text-transform(capitalize !important)
   );
 }
 
+//--- helper-text-hide
 @function helper-text-hide() {
   @return this(
     font(0/0 a),
@@ -483,24 +523,28 @@
   );
 }
 
+//--- helper-text-lowercase
 @function helper-text-lowercase() {
   @return this(
     text-transform(lowercase !important)
   );
 }
 
+//--- helper-text-uppercase
 @function helper-text-uppercase() {
   @return this(
     text-transform(uppercase !important)
   );
 }
 
+//--- helper-text-nowrapp
 @function helper-text-nowrapp() {
   @return this(
     white-space(nowrap !important)
   );
 }
 
+//--- helper-text-truncate
 @function helper-text-truncate() {
   @return this(
     overflow(hidden),
@@ -509,7 +553,7 @@
   );
 }
 
-//--- utilities
+//--- helpers-utilities
 @function helpers-utilities($prefix: $prefix-helper-utilities) {
   @return style(
     rule('#{$prefix-helper}#{$prefix}last-margin-0', helper-utilities-last-margin-0()),
@@ -517,6 +561,7 @@
   );
 }
 
+//--- helper-utilities-last-margin-0
 @function helper-utilities-last-margin-0() {
   @return rule(
     '& > *:last-child',
@@ -524,6 +569,7 @@
   );
 }
 
+//--- helper-utilities-sr-only
 @function helper-utilities-sr-only() {
   @return this(
     position(absolute),
@@ -536,6 +582,5 @@
     border(0)
   );
 }
-
 
 //---

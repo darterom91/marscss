@@ -1,3 +1,4 @@
+//--- reset
 @function reset() {
   @return (
     '*': reset-box-sizing(),
@@ -21,6 +22,7 @@
   );
 }
 
+//--- reset-box-sizing
 @function reset-box-sizing() {
   @return (
     (
@@ -31,6 +33,7 @@
   );
 }
 
+//--- reset-html
 @function reset-html() {
   @return (
     '&': (
@@ -43,6 +46,7 @@
   );
 }
 
+//--- reset-body
 @function reset-body() {
   @return(
     '&': (
@@ -57,6 +61,7 @@
   );
 }
 
+//--- reset-link
 @function reset-link() {
   @return(
     '&': (
@@ -66,6 +71,7 @@
   );
 }
 
+//--- reset-button
 @function reset-button() {
   @return(
     '&': (
@@ -85,6 +91,7 @@
   );
 }
 
+//--- reset-heading
 @function reset-heading() {
   @return (
     '&': (
@@ -97,6 +104,7 @@
   );
 }
 
+//--- reset-text-block
 @function reset-text-block() {
   @return (
     '&': (
@@ -105,6 +113,7 @@
   );
 }
 
+//--- reset-list
 @function reset-list() {
   @return(
     '&': (
@@ -115,6 +124,7 @@
   );
 }
 
+//--- reset-checks
 @function reset-checks() {
   @return(
     '&': (
@@ -125,3 +135,4 @@
   );
 }
 
+//---

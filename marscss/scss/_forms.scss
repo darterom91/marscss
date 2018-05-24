@@ -1,7 +1,4 @@
 //--- forms
-/////////////////////////////////////////////////////////////////////////////////////////
-// group all the form selectors using the extend
-
 @function forms($prefix: $prefix-forms) {
   @return style(
     rule('#{$prefix}checkbox', extend('%checkbox')),
@@ -14,9 +11,6 @@
 }
 
 //--- form-element
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms items
-
 @function form-element() {
   @return style(
     form-element-root(),
@@ -26,6 +20,7 @@
   );
 }
 
+//--- form-element-root
 @function form-element-root() {
   @return this(
     display(block),
@@ -43,6 +38,7 @@
   );
 }
 
+//--- form-element-is-focus
 @function form-element-is-focus() {
   @return this(
     this-focus(
@@ -51,6 +47,7 @@
   );
 }
 
+//--- form-element-is-placeholder
 @function form-element-is-placeholder() {
   @return this(
     this-placeholder(
@@ -60,6 +57,7 @@
   );
 }
 
+//--- form-element-is-disabled
 @function form-element-is-disabled() {
   @return this(
     this-disabled(
@@ -70,9 +68,6 @@
 }
 
 //--- form-checks
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and radio and checks elements
-
 @function form-checks() {
   @return style(
     form-checks-root(),
@@ -80,6 +75,7 @@
   );
 }
 
+//--- form-checks-root
 @function form-checks-root() {
   @return this(
     display(inline-block),
@@ -88,6 +84,7 @@
   );
 }
 
+//--- form-checks-is-disabled
 @function form-checks-is-disabled() {
   @return this(
     this-disabled(
@@ -98,9 +95,6 @@
 }
 
 //--- form-checkbox
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms()
-
 @function form-checkbox() {
   @return style(
     form-checkbox-root(),
@@ -108,12 +102,14 @@
   );
 }
 
+//--- form-checkbox-root
 @function form-checkbox-root() {
   @return this(
     extend('%form-checks')
   );
 }
 
+//--- form-checkbox-after-checkbox
 @function form-checkbox-after-checkbox() {
   @return this(
     rule(
@@ -124,9 +120,6 @@
 }
 
 //--- form-label
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and radio and checks elements
-
 @function form-label() {
   @return style(
     form-label-root(),
@@ -135,6 +128,7 @@
   );
 }
 
+//--- form-label-root
 @function form-label-root() {
   @return this(
     display(inline-block),
@@ -142,6 +136,7 @@
   );
 }
 
+//--- form-label-hover
 @function form-label-hover() {
   @return this(
     this-for(
@@ -153,6 +148,7 @@
   );
 }
 
+//--- form-label-required
 @function form-label-required() {
   @return this(
     this-required-after(
@@ -164,9 +160,6 @@
 }
 
 //--- form-input
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms() is extended by textarea
-
 @function form-input() {
   @return style(
     form-input-required(),
@@ -174,12 +167,14 @@
   );
 }
 
+//--- form-input-root
 @function form-input-root() {
   @return this(
     extend('%form-element')
   );
 }
 
+//--- form-input-required
 @function form-input-required() {
   @return this(
     rule(
@@ -191,9 +186,6 @@
 }
 
 //--- form-radio
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms()
-
 @function form-radio() {
   @return style(
     form-radio-root(),
@@ -201,12 +193,14 @@
   );
 }
 
+//--- form-radio-root
 @function form-radio-root() {
   @return this(
     extend('%form-checks')
   );
 }
 
+//--- form-radio-after-radio
 @function form-radio-after-radio() {
   @return this(
     rule(
@@ -217,9 +211,6 @@
 }
 
 //--- form-textarea
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms()
-
 @function form-textarea() {
   @return style(
     form-textarea-root(),
@@ -227,12 +218,14 @@
   );
 }
 
+//--- form-textarea-root
 @function form-textarea-root() {
   @return this(
     extend('%input')
   );
 }
 
+//--- form-textarea-no-resize
 @function form-textarea-no-resize() {
   @return this(
     this-no-resize(
@@ -242,9 +235,6 @@
 }
 
 //--- form-select
-/////////////////////////////////////////////////////////////////////////////////////////
-// used by extend and forms()
-
 @function form-select() {
   @return style(
     form-select-root(),
@@ -253,6 +243,7 @@
   );
 }
 
+//--- form-select-root
 @function form-select-root() {
   @return this(
     extend('%form-element'),
@@ -261,16 +252,19 @@
   );
 }
 
+//--- form-select-invalid
 @function form-select-invalid() {
   @return this(
     color($form-element-placeholder)
   );
 }
 
+//--- form-select-reset
 @function form-select-reset() {
   @return rule(
     '&::-ms-expand',
     display(none)
   );
 }
+
 //---
