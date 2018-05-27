@@ -1,4 +1,5 @@
 - name: elements
+  type: builder
 - name: common-heading
   type: common
 - name: common-text-block
