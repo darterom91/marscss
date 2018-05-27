@@ -13,15 +13,15 @@
 //--- form-element
 @function form-element() {
   @return style(
-    form-element-root(),
-    form-element-is-focus(),
-    form-element-is-placeholder(),
-    form-element-is-active()
+    form-element--root(),
+    form-element--is-focus(),
+    form-element--is-placeholder(),
+    form-element--is-active()
   );
 }
 
-//--- form-element-root
-@function form-element-root() {
+//--- form-element--root
+@function form-element--root() {
   @return this(
     display(block),
     width(100%),
@@ -38,8 +38,8 @@
   );
 }
 
-//--- form-element-is-focus
-@function form-element-is-focus() {
+//--- form-element--is-focus
+@function form-element--is-focus() {
   @return this(
     this-focus(
       extend('%focus')
@@ -47,8 +47,8 @@
   );
 }
 
-//--- form-element-is-placeholder
-@function form-element-is-placeholder() {
+//--- form-element--is-placeholder
+@function form-element--is-placeholder() {
   @return this(
     this-placeholder(
       color($form-element-placeholder),
@@ -57,8 +57,8 @@
   );
 }
 
-//--- form-element-is-disabled
-@function form-element-is-disabled() {
+//--- form-element--is-disabled
+@function form-element--is-disabled() {
   @return this(
     this-disabled(
       pointer-events(none),
@@ -70,13 +70,13 @@
 //--- form-checks
 @function form-checks() {
   @return style(
-    form-checks-root(),
-    form-checks-is-disabled()
+    form-checks--root(),
+    form-checks--is-disabled()
   );
 }
 
-//--- form-checks-root
-@function form-checks-root() {
+//--- form-checks--root
+@function form-checks--root() {
   @return this(
     display(inline-block),
     margin-bottom(.5em),
@@ -84,8 +84,8 @@
   );
 }
 
-//--- form-checks-is-disabled
-@function form-checks-is-disabled() {
+//--- form-checks--is-disabled
+@function form-checks--is-disabled() {
   @return this(
     this-disabled(
       cursor(not-allowed),
@@ -97,20 +97,20 @@
 //--- form-checkbox
 @function form-checkbox() {
   @return style(
-    form-checkbox-root(),
-    form-checkbox-after-checkbox()
+    form-checkbox--root(),
+    form-checkbox--after-checkbox()
   );
 }
 
-//--- form-checkbox-root
-@function form-checkbox-root() {
+//--- form-checkbox--root
+@function form-checkbox--root() {
   @return this(
     extend('%form-checks')
   );
 }
 
-//--- form-checkbox-after-checkbox
-@function form-checkbox-after-checkbox() {
+//--- form-checkbox--after-checkbox
+@function form-checkbox--after-checkbox() {
   @return this(
     rule(
       '& + &',
@@ -122,22 +122,22 @@
 //--- form-label
 @function form-label() {
   @return style(
-    form-label-root(),
-    form-label-required(),
-    form-label-hover()
+    form-label--root(),
+    form-label--required(),
+    form-label--hover()
   );
 }
 
-//--- form-label-root
-@function form-label-root() {
+//--- form-label--root
+@function form-label--root() {
   @return this(
     display(inline-block),
     margin-bottom(.5em)
   );
 }
 
-//--- form-label-hover
-@function form-label-hover() {
+//--- form-label--hover
+@function form-label--hover() {
   @return this(
     this-for(
       cursor(pointer),
@@ -148,8 +148,8 @@
   );
 }
 
-//--- form-label-required
-@function form-label-required() {
+//--- form-label--required
+@function form-label--required() {
   @return this(
     this-required-after(
       margin-left(.5em),
@@ -162,20 +162,20 @@
 //--- form-input
 @function form-input() {
   @return style(
-    form-input-required(),
-    form-input-root()
+    form-input--root(),
+    form-input--required()
   );
 }
 
-//--- form-input-root
-@function form-input-root() {
+//--- form-input--root
+@function form-input--root() {
   @return this(
     extend('%form-element')
   );
 }
 
-//--- form-input-required
-@function form-input-required() {
+//--- form-input--required
+@function form-input--required() {
   @return this(
     rule(
       '&[required]',
@@ -188,20 +188,20 @@
 //--- form-radio
 @function form-radio() {
   @return style(
-    form-radio-root(),
-    form-radio-after-radio()
+    form-radio--root(),
+    form-radio--after-radio()
   );
 }
 
-//--- form-radio-root
-@function form-radio-root() {
+//--- form-radio--root
+@function form-radio--root() {
   @return this(
     extend('%form-checks')
   );
 }
 
-//--- form-radio-after-radio
-@function form-radio-after-radio() {
+//--- form-radio--after-radio
+@function form-radio--after-radio() {
   @return this(
     rule(
       '& + &',
@@ -213,20 +213,20 @@
 //--- form-textarea
 @function form-textarea() {
   @return style(
-    form-textarea-root(),
-    form-textarea-no-resize()
+    form-textarea--root(),
+    form-textarea--no-resize()
   );
 }
 
-//--- form-textarea-root
-@function form-textarea-root() {
+//--- form-textarea--root
+@function form-textarea--root() {
   @return this(
     extend('%input')
   );
 }
 
-//--- form-textarea-no-resize
-@function form-textarea-no-resize() {
+//--- form-textarea--no-resize
+@function form-textarea--no-resize() {
   @return this(
     this-no-resize(
       resize(none)
@@ -237,14 +237,14 @@
 //--- form-select
 @function form-select() {
   @return style(
-    form-select-root(),
-    form-select-invalid(),
-    form-select-reset()
+    form-select--root(),
+    form-select--invalid(),
+    form-select--reset()
   );
 }
 
-//--- form-select-root
-@function form-select-root() {
+//--- form-select--root
+@function form-select--root() {
   @return this(
     extend('%form-element'),
     padding-right(2em),
@@ -252,15 +252,15 @@
   );
 }
 
-//--- form-select-invalid
-@function form-select-invalid() {
+//--- form-select--invalid
+@function form-select--invalid() {
   @return this(
     color($form-element-placeholder)
   );
 }
 
-//--- form-select-reset
-@function form-select-reset() {
+//--- form-select--reset
+@function form-select--reset() {
   @return rule(
     '&::-ms-expand',
     display(none)
