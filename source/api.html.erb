@@ -1,0 +1,66 @@
+---
+title: Api of marscss
+body: api
+active: api
+---
+<div class="wrapper">
+  <div class="api-sidebar">
+    <ul class="sidebar-menu">
+      <li>
+        <a href="#builders">
+          builder
+        </a>
+      </li>
+      <li>
+        <a href="#common">
+          common
+        </a>
+      </li>
+      <li>
+        <a href="#builders">
+          composed
+        </a>
+      </li>
+      <li>
+        <a href="#modifier">
+          modifier
+        </a>
+      </li>
+      <li>
+        <a href="#modifier">
+          rule
+        </a>
+      </li>
+      <li>
+        <a href="#properties">
+          rule
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="api-content">
+    <div class="api-search">
+      <input type="text" class="input">
+    </div>
+    <table class="table-collapse">
+      <thead>
+        <tr>
+          <th class="cell-type">Type</th>
+          <th class="cell-name">Name</th>
+          <th class="cell-file">File</th>
+          <th class="cell-actions"></th>
+        </tr>
+      </thead>
+      <tbody>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.elements,
+        file: '_elements.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.forms,
+        file: '_forms.scss'
+      } %>
+      </tbody>
+    </table>
+  </div>
+</div>
