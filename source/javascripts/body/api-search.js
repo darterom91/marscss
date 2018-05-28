@@ -4,7 +4,7 @@
   const input = '.api-search input';
   const tableItem = '.table-collapse__btn';
 
-  $(input).on('keyup', value => searchTable());
+  $(input).on('keyup', searchTable);
 
   function searchTable() {
     $(tableItem).each((index, element) => {
