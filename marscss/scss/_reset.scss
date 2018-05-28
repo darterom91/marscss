@@ -82,7 +82,8 @@
       color: inherit,
       background-color: transparent,
       border: 0,
-      appearance: none
+      appearance: none,
+      line-height: inherit
     ),
     '&::hover,&::focus,&::active': (
       text-decoration: none,
@@ -128,8 +129,8 @@
 @function reset-checks() {
   @return(
     '&': (
-      margin: 4px,
-      vertical-align: baseline,
+      margin: 4px 0,
+      vertical-align: middle,
       cursor: pointer
     )
   );

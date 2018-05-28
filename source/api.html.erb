@@ -6,49 +6,38 @@ active: api
 <div class="wrapper">
   <div class="api-sidebar">
     <ul class="sidebar-menu">
+      <% ['builder','rule','common','composed','modifier'].each do |item| %>
       <li>
-        <a href="#builders">
-          builder
-        </a>
+        <button>
+          <i class="icon-type-<%= item %>"></i>
+          <%= item %>
+        </button>
       </li>
-      <li>
-        <a href="#common">
-          common
-        </a>
-      </li>
-      <li>
-        <a href="#builders">
-          composed
-        </a>
-      </li>
-      <li>
-        <a href="#modifier">
-          modifier
-        </a>
-      </li>
-      <li>
-        <a href="#modifier">
-          rule
-        </a>
-      </li>
-      <li>
-        <a href="#properties">
-          rule
-        </a>
-      </li>
+      <% end %>
     </ul>
   </div>
   <div class="api-content">
     <div class="api-search">
-      <input type="text" class="input">
+      <input type="text" class="input" placeholder="search by name">
     </div>
     <table class="table-collapse">
       <thead>
         <tr>
-          <th class="cell-type">Type</th>
-          <th class="cell-name">Name</th>
-          <th class="cell-file">File</th>
-          <th class="cell-actions"></th>
+          <th class="cell-type">
+            Type
+          </th>
+          <th class="cell-name">
+            <label class="checkbox">
+              Name
+              <input type="checkbox" data-target=".search-by-name" data-placeholder="name" checked>
+            </label>
+          </th>
+          <th class="cell-file">
+            <label class="checkbox">
+              marscss file
+              <input type="checkbox" data-target=".search-by-file" data-placeholder="file">
+            </label>
+          </th>
         </tr>
       </thead>
       <tbody>

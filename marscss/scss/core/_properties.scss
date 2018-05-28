@@ -498,8 +498,8 @@ $mod-spacing: $gutter / 2 !default;
   @return ( order: $arg);
 }
 
-@function outline($arg...) {
-  @return ( outline: $arg $arg $arg);
+@function outline($arg) {
+  @return ( outline: $arg);
 }
 
 @function outline-color($arg) {

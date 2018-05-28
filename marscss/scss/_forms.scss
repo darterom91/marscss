@@ -15,6 +15,7 @@
   @return style(
     form-element--root(),
     form-element--is-focus(),
+    form-element--is-disabled(),
     form-element--is-placeholder(),
     form-element--is-active()
   );
@@ -62,6 +63,7 @@
   @return this(
     this-disabled(
       pointer-events(none),
+      cursor(not-allowed),
       opacity($form-element-disabled)
     )
   );

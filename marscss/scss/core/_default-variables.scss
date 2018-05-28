@@ -30,8 +30,8 @@ $grays: map-merge(
 );
 
 $blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$indigo:  #3e297a !default;
+$purple:  #7630ff !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
 $orange:  #f9b13d !default;
@@ -61,6 +61,7 @@ $colors: map-merge(
 
 //--- elements
 $font-family:           sans-serif !default;
+$font-family-code:      'Consolas', 'Courier New', monospace !default;
 $font-weight:           400 !default;
 $border-radius:         3px !default;
 
@@ -108,7 +109,7 @@ $prefix-forms: '.' !default;
 $form-element-bg: $white !default;
 $form-element-border-radius: 3px !default;
 $form-element-border: 1px solid $border-color !default;
-$form-element-disabled: .3 !default;
+$form-element-disabled: .4 !default;
 $form-element-icon-color: $primary !default;
 $form-element-line-height: 1.8em !default;
 $form-element-padding: .4em 1em !default;

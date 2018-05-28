@@ -1,18 +1,18 @@
 <% locals[:data].each do |item| %>
+  <% item.type ||= 'rule' %>
   <tr class="table-collapse__btn">
     <td class="cell-type">
       <div class="type">
-        <%= item.type ||= 'rule' %>
+        <i class="icon-type-<%= item.type %>"
+           title="<%= item.type %>"></i>
       </div>
     </td>
-    <td class="cell-name">
+    <td class="cell-name search-by-name">
       <i class="table-collapse__icon"></i>
-      <span class="search-by-name">
-        <%= item.name %>
-      </span>
+      <%= item.name %>
     </td>
-    <td class="cell-file">
-      <%= "marscss/scss/#{locals[:file]}" %>
+    <td class="cell-file search-by-file">
+      <%= "scss/#{locals[:file]}" %>
     </td>
   </tr>
   <tr class="table-collapse__item">
