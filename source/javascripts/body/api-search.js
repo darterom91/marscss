@@ -41,11 +41,7 @@
         }
       });
 
-      if (string.indexOf(filter) > -1) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
+      $elements.toggle(string.indexOf(filter) > -1);
     });
   }
 })();
