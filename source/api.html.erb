@@ -46,8 +46,36 @@ active: api
         file: '_elements.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
+        data: data.api['extend'],
+        file: '_extend.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
         data: data.api.forms,
         file: '_forms.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.grid,
+        file: '_grid.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.helpers,
+        file: '_helpers.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.icons,
+        file: '_icons.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.init,
+        file: '_init.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.reset,
+        file: '_reset.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
+        data: data.api.utilities,
+        file: '_utilities.scss'
       } %>
       </tbody>
     </table>

@@ -42,4 +42,11 @@
   type: modifier
 - name: form-radio--after-radio
   type: modifier
+- name: form-textarea
+- name: form-textarea--root
+- name: form-textarea--no-resize
+- name: form-select
+- name: form-select--root
+- name: form-select--invalid
+- name: form-select--reset
 

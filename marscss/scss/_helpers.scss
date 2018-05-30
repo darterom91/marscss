@@ -41,7 +41,7 @@
   );
 }
 
-//--- helper-aling-middle
+//--- helper-align-middle
 @function helper-align-middle() {
   @return this(
     vertical-align(middle !important)
@@ -290,7 +290,7 @@
   );
 }
 
-//helper-display-none
+//--- helper-display-none
 @function helper-display-none() {
   @return this(
     display(none !important)
