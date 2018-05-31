@@ -1,6 +1,6 @@
 <% locals[:data].each do |item| %>
   <% item.type ||= 'rule' %>
-  <tr class="table-collapse__btn">
+  <tr class="table-collapse__btn is-<%= item.type %>" >
     <td class="cell-type">
       <div class="type">
         <i class="icon-type-<%= item.type %>"
@@ -15,7 +15,7 @@
       <%= "scss/#{locals[:file]}" %>
     </td>
   </tr>
-  <tr class="table-collapse__item">
+  <tr class="table-collapse__item is-<%= item.type %>">
     <td colspan="3">
       <div class="table-collapse__resize">
         <div class="table-collapse__container">

@@ -24,6 +24,28 @@ body.api {
       padding: $gutter $gutter $gutter;
       overflow-y: auto;
     }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: .5em;
+      margin-bottom: .5em;
+      line-height: 1.4;
+      text-align: inherit;
+      transition: opacity .3s ease-out;
+
+      &:hover {
+        background-color: $white;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:not(.is-active) {
+        opacity: .4;
+      }
+    }
   }
 
   .api-content {
@@ -79,6 +101,10 @@ body.api {
           vertical-align: middle;
         }
       }
+    }
+
+    tr.is-filtered {
+      display: none !important;
     }
 
     &__btn {

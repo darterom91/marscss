@@ -5,16 +5,14 @@ active: api
 ---
 <div class="wrapper">
   <div class="api-sidebar">
-    <ul class="sidebar-menu">
+    <div class="sidebar-menu">
       <% ['builder','rule','common','composed','modifier'].each do |item| %>
-      <li>
-        <button>
-          <i class="icon-type-<%= item %>"></i>
-          <%= item %>
-        </button>
-      </li>
+      <button class="is-active" data-target="<%= item %>">
+        <i class="icon-type-<%= item %>"></i>
+        <%= item %>
+      </button>
       <% end %>
-    </ul>
+    </div>
   </div>
   <div class="api-content">
     <div class="api-search">
@@ -42,39 +40,39 @@ active: api
       </thead>
       <tbody>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.elements,
+        data: data.api['api_elements'],
         file: '_elements.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api['extend'],
+        data: data.api['api_extend'],
         file: '_extend.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.forms,
+        data: data.api['api_forms'],
         file: '_forms.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.grid,
+        data: data.api['api_grid'],
         file: '_grid.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.helpers,
+        data: data.api['api_helpers'],
         file: '_helpers.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.icons,
+        data: data.api['api_icons'],
         file: '_icons.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.init,
+        data: data.api['api_init'],
         file: '_init.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.reset,
+        data: data.api['api_reset'],
         file: '_reset.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
-        data: data.api.utilities,
+        data: data.api['api_utilities'],
         file: '_utilities.scss'
       } %>
       </tbody>
