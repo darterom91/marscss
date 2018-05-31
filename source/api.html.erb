@@ -68,6 +68,10 @@ active: api
         file: '_init.scss'
       } %>
       <%= partial 'partials/api-item', locals:{
+        data: data.api['api_properties'],
+        file: 'core/_properties.scss'
+      } %>
+      <%= partial 'partials/api-item', locals:{
         data: data.api['api_reset'],
         file: '_reset.scss'
       } %>
